@@ -10,7 +10,7 @@
         <!--链接地址用户名密码 -->
         <property name="connection.url">jdbc:mysql://127.0.0.1:3306/DB_I_T_PUSH?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">ko121242</property>
+        <property name="connection.password">123456</property>
 
         <!--<property name="connection.url">jdbc:mysql://qiujuer.net:6968/DB_I_T_PUSH?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>-->
 
@@ -31,7 +31,7 @@
         <!--在连接池中所有数据库连接的最大数目-->
         <property name="c3p0.max_size">50</property>
         <!--设定数据库连接的超时时间-->
-        <property name="c3p0.time_out">1800</property>
+        <!--<property name="c3p0.time_out">1800</property>-->
         <property name="c3p0.timeout">100</property>
         <!--可以被缓存的PreparedStatement的最大数目-->
         <property name="c3p0.max_statement">50</property>
