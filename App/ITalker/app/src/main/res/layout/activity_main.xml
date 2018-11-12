@@ -30,7 +30,7 @@
             android:clickable="true"
             android:foreground="@drawable/ic_touch_menu"
             android:src="@drawable/default_portrait"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop" />
         <TextView
             android:id="@+id/txt_title"
             android:textAppearance="@style/TextAppearance.Title"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/app_name"/>
+            android:text="@string/app_name" />
 
         <ImageView
             android:id="@+id/im_searh"
@@ -78,11 +78,19 @@
             android:layout_marginEnd="@dimen/len_16"
             />
     <android.support.design.widget.BottomNavigationView
-        android:background="@color/grey_200"
+        android:background="@color/white"
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/len_52"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        app:menu="@menu/navigation_items"
+        app:itemIconTint="@color/text_nav"
+        app:itemTextColor="@color/text_nav"
+        android:elevation="@dimen/len_4"
+        android:outlineProvider="bounds"
+        tools:targetApi="lollipop"
+        android:translationZ="@dimen/len_8"
+        >
 
     </android.support.design.widget.BottomNavigationView>
 </android.support.design.widget.CoordinatorLayout>
