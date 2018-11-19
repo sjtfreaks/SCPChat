@@ -123,7 +123,20 @@ public abstract class RecyclerAdapter<Data>
         mDataList.addAll(dataList);
         notifyDataSetChanged();
     }
+    //更新
+    @Override
+    public void update(Data data, ViewHolder<Data> holder) {
+        //得到当前ViewHoler坐标
+        int pos = holder.getAdapterPosition();
+        if (pos >= 0) {
+            //当前数据的移除和刷新
+            mDataList.remove(pos);
+            mDataList.add(pos,data);
+            notifyItemChanged(pos);
+        }
+    }
 
+    //点击
     @Override
     public boolean onLongClick(View view) {
         ViewHolder viewHolder = (ViewHolder) view.getTag(R.id.tag_recycler_holder);
@@ -181,6 +194,23 @@ public abstract class RecyclerAdapter<Data>
         if (this.callback != null){
             this.callback.update(data,this);
         }
+        }
+    }
+
+    /**
+     * 对回掉窗口做实现
+     * @param <Data>
+     */
+    public static abstract class AdapterListenerImpl<Data> implements AdapterListener<Data>{
+
+        @Override
+        public void onItemClick(ViewHolder holder, Data data) {
+
+        }
+
+        @Override
+        public void OnItemLongClick(ViewHolder holder, Data data) {
+
         }
     }
 }

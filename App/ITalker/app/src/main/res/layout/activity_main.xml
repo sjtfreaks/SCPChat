@@ -67,6 +67,7 @@
         <net.qiujuer.genius.ui.widget.FloatActionButton
             android:id="@+id/btn_aciton"
             android:tint="@color/white"
+            android:transformPivotY="@dimen/len_76"
             android:padding="@dimen/len_20"
             app:gBackgroundColor="@color/colorPrimary"
             android:src="@drawable/ic_contact_add"
