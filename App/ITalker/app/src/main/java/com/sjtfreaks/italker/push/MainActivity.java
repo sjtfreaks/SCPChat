@@ -22,6 +22,7 @@ import com.bumptech.glide.request.target.ViewTarget;
 import com.sjtfreaks.common.Common;
 import com.sjtfreaks.common.app.Activity;
 import com.sjtfreaks.common.widget.PortraitView;
+import com.sjtfreaks.italker.push.activities.AccountActivity;
 import com.sjtfreaks.italker.push.fragment.main.ActiveFragment;
 import com.sjtfreaks.italker.push.fragment.main.ContactFragment;
 import com.sjtfreaks.italker.push.fragment.main.GroupFragment;
@@ -101,7 +102,7 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
     }
     @OnClick(R.id.btn_aciton)
     void onActionClick(){
-
+        AccountActivity.show(this);
     }
     boolean isFirst;
     @Override

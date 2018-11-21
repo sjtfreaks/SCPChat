@@ -43,4 +43,7 @@ ext{
     glideVersion = '3.7.0'
     circleimageviewVersion = '2.1.0'
 
+    //图片裁剪
+    ucropVersion = "2.2.0-native"
+
 }
