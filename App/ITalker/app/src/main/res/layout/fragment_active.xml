@@ -5,12 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".fragment.main.ActiveFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
+   
+    <com.sjtfreaks.common.widget.GalleyView
+        android:id="@+id/galleyView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Active"
-        android:textColor="@color/colorPrimary"/>
+        android:padding="1dp"
+        >
+
+    </com.sjtfreaks.common.widget.GalleyView>
 
 </FrameLayout>

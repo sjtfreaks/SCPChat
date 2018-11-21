@@ -7,11 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sjtfreaks.common.app.Fragment;
+import com.sjtfreaks.common.widget.GalleyView;
 import com.sjtfreaks.italker.push.R;
+
+import butterknife.BindView;
 
 
 public class ActiveFragment extends Fragment {
-
+    @BindView(R.id.galleyView)
+    GalleyView mGalley;
 
     public ActiveFragment() {
         // Required empty public constructor
@@ -23,4 +27,15 @@ public class ActiveFragment extends Fragment {
         return R.layout.fragment_active;
     }
 
+    @Override
+    protected void initData() {
+        super.initData();
+
+        mGalley.setup(getLoaderManager(), new GalleyView.SelectedChangeListener() {
+            @Override
+            public void onSelectedCountChanged(int count) {
+
+            }
+        });
+    }
 }
